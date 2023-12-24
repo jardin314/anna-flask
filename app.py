@@ -20,8 +20,8 @@ def about():
 
 
 @app.route('/contact')
-def admin():
-    return render_template('contact')
+def contact():
+    return render_template('contact.html')
 
 
 if __name__ == '__main__':
