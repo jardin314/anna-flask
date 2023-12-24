@@ -1,6 +1,6 @@
-'''
+"""
 TODO pydoc
-'''
+"""
 
 
 from flask import Flask, redirect, url_for, render_template
@@ -15,7 +15,7 @@ def home():
 
 
 @app.route('/about')
-def about(me):
+def about():
     return render_template('about.html')
 
 
