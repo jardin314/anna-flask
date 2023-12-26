@@ -1,3 +1,4 @@
+"""Contact form handling"""
 import functools
 
 from flask import (

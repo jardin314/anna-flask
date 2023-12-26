@@ -1,6 +1,10 @@
+"""
+Connects the app the the sqlite3 database
+"""
 import sqlite3
 
 import click
+
 from flask import current_app, g
 
 
