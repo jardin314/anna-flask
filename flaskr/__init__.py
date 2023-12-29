@@ -30,22 +30,23 @@ def create_app(test_config=None):
     from . import auth
     app.register_blueprint(auth.bp)
 
-    # a simple page that says hello
-    @app.route('/hello')
-    def hello():
-        return 'Hello, World!'
-
+    from . import blog
+    app.register_blueprint(blog.bp)
+    app.add_url_rule('/', endpoint='index')
+    
+    """Home page route"""
     @app.route('/home')
     def home():
         return render_template('home.html')
 
+    """About page"""
     @app.route('/about')
     def about():
         return render_template('about.html')
 
+    """Contact form page"""
     @app.route('/contact')
     def contact():
         return render_template('contact.html')
 
     return app
-

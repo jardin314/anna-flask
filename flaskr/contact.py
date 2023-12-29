@@ -16,7 +16,7 @@ def contact():
         name = request.form['name']
         email = request.form['email']
         phone = request.form['phone']
-        messageBody = request.form['body']
+        messageBody = request.form['message body']
         db = get_db()
         error = None
 
