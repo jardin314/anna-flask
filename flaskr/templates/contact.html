@@ -1,9 +1,18 @@
-<!DOCTYPE html>
-<head>
-    <title>Contact me</title>
-</head>
-<body>
-    <form>
-        
-    </form>
-</body>
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Contact Me{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form>
+  <label for="name">Name</label>
+  <input type="text" name="name" required>
+  <label for="email">Email</label>
+  <input type="text" name="email" required>
+  <label for="phone">Phone number</label>
+  <input type="text" name="phone">
+  <label for="message body">Message</label>
+  <input type="text" name="message body">
+</form>
+{% endblock %}

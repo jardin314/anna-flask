@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<head>
-    <title>About Anna</title>
-</head>
-<body>
-    <h1>Anna Strazzere</h1>
-    <p>Anna creates geometric abstractions inspired by the lush colors and nature of her home state of Florida</p>
-</body>
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}About Me{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<p>Anna creates colorful abstractions inspired by the nature in her home state of Florida</p> 
+{% endblock %}
+
