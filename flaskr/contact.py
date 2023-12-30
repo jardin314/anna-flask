@@ -8,7 +8,7 @@ from flaskr.db import get_db
 bp = Blueprint('contact', __name__, url_prefix='/contact')
 
 
-@bp.route('/form', methods=('GET', 'POST'))
+@bp.route('/', methods=('GET', 'POST'))
 def contact():
     if request.method == 'POST':
         name = request.form['name']
@@ -38,4 +38,4 @@ def contact():
 
         flash(error)
 
-        return render_template('contact.html')
+    return render_template('contact.html')
