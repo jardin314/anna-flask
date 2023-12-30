@@ -14,7 +14,7 @@ def contact():
         name = request.form['name']
         email = request.form['email']
         phone = request.form['phone']
-        messageBody = request.form['message body']
+        message_body = request.form['message body']
         db = get_db()
         error = None
 
@@ -27,7 +27,7 @@ def contact():
             try:
                 db.execute(
                         "INSERT INTO contactInfo (name, email, phone, messageBody) VALUES (?, ?, ?, ?)",
-                        (name, email, phone, messageBody)
+                        (name, email, phone, message_body)
                         )
                 db.commit()
             except:
