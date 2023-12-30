@@ -48,4 +48,8 @@ def create_app(test_config=None):
     from . import contact
     app.register_blueprint(contact.bp)
 
+    """Admin view for checking contact info"""
+    from . import admin
+    app.register_blueprint(admin.bp)
+
     return app
