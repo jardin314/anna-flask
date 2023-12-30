@@ -33,7 +33,7 @@ def create_app(test_config=None):
     from . import blog
     app.register_blueprint(blog.bp)
     app.add_url_rule('/', endpoint='index')
-    
+
     """Home page route"""
     @app.route('/home')
     def home():
@@ -45,8 +45,7 @@ def create_app(test_config=None):
         return render_template('about.html')
 
     """Contact form page"""
-    @app.route('/contact')
-    def contact():
-        return render_template('contact.html')
+    from . import contact
+    app.register_blueprint(contact.bp)
 
     return app

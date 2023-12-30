@@ -1,8 +1,6 @@
 """Contact form handling"""
-import functools
-
 from flask import (
-    Blueprint, flash, g, redirect, render_template, request, session, url_for
+    Blueprint, flash, redirect, render_template, request, url_for
 )
 
 from flaskr.db import get_db
@@ -35,5 +33,9 @@ def contact():
             except:
                 error = 'Something went wrong!'
             else:
-                # TODO add to this
-                return redirect(url_for(''))
+                # TODO make this redirect to a "contact submitted" page
+                return redirect(url_for('home'))
+
+        flash(error)
+
+        return render_template('contact.html')
