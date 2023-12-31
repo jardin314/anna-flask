@@ -6,12 +6,8 @@
 
 {% block content %}
   {% for contact in contacts %}
-    <h2 class="contact">
-      {{ contact[name] }}
-    </h2>
-    <p>{{ contact[email] }}  {{ contact[phone] }}</p>
-    <p class="body">{{ contact['message_body'] }}</p>
-    {% if not loop.last %}
+  <p>contact: {{ contact }}</p>
+   {% if not loop.last %}
       <hr>
     {% endif %}
   {% endfor %}

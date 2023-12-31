@@ -11,26 +11,12 @@ bp = Blueprint('admin', __name__, url_prefix='/admin')
 
 @bp.route('/')
 def get_contacts():
-    contacts = []
+    contacts = ['test']
     db = get_db()
-    error = None
 
-    try:
-        rows = db.execute('SELECT id, name, email, phone, messageBody, created FROM contactInfo').fetchOne()
-        flash(rows)
-        if rows is None:
-            abort(404, 'No contacts to retrieve')
-        for row in rows:
-            contacts.append({'id': row[0],
-                             'name': row[1],
-                             'email': row[2],
-                             'phone': row[3],
-                             'messageBody': row[4],
-                             'created': row[5]})
-    except Exception:
-        error = 'Something went wrong'
-
-    if error is not None:
-        flash(error)
-
+    rows = db.execute('SELECT id, name, email, phone, messageBody, created FROM contactInfo').fetchall()
+    if rows is None:
+        abort(404, 'No contacts to retrieve')
+    for row in rows:
+        contacts.append(row)
     return render_template('admin.html')
