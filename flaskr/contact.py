@@ -26,7 +26,7 @@ def contact():
         if error is None:
             try:
                 db.execute(
-                        "INSERT INTO contactInfo (name, email, phone, messageBody) VALUES (?, ?, ?, ?)",
+                        'INSERT INTO contactInfo (name, email, phone, messageBody) VALUES (?, ?, ?, ?)',
                         (name, email, phone, message_body)
                         )
                 db.commit()
