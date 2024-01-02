@@ -1,0 +1,15 @@
+html {
+  font-family: sans-serif;
+  background: #ffe5b4;
+}
+
+#images {
+  display: flex;
+  flex-direction: column;
+}
+
+.art {
+  padding: 3em;
+  max-width: 10em;
+  max-height: 15em;
+}
