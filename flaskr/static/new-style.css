@@ -6,10 +6,11 @@ html {
 #images {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .art {
   padding: 3em;
-  max-width: 10em;
-  max-height: 15em;
+  max-width: 20em;
+  max-height: 25em;
 }

@@ -2,16 +2,15 @@
 
 {% block header %}
   <h1>{% block title %}Color Paradise{% endblock %}</h1>
-  <link rel="stylesheet" href="{{ url_for('static', filename='new-style.css') }}">
 {% endblock %}
 
 {% block content %}
 <p>Welcome</p> 
 <section id="images">
-  <img src="{{ url_for('static', filename='image0.jpeg') }}" alt="Two cool dudes">
-  <img src="{{ url_for('static', filename='image1.jpeg') }}" alt="Pair of cube paintings">
-  <img src="{{ url_for('static', filename='image2.jpeg') }}" alt="Beetlejuice mural">
-  <img src="{{ url_for('static', filename='image3.jpeg') }}" alt="Pair of cube paintings again">
+  <img class="art" src="{{ url_for('static', filename='image0.jpeg') }}" alt="Two cool dudes">
+  <img class="art" src="{{ url_for('static', filename='image1.jpeg') }}" alt="Pair of cube paintings">
+  <img class="art" src="{{ url_for('static', filename='image2.jpeg') }}" alt="Beetlejuice mural">
+  <img class="art" src="{{ url_for('static', filename='image3.jpeg') }}" alt="Pair of cube paintings again">
 </section>
 {% endblock %}
 
