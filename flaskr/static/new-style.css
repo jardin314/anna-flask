@@ -1,16 +1,29 @@
 html {
-  font-family: sans-serif;
-  background: #ffe5b4;
+  font-family: Impact;
+  background: #ffc3a4;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  background: #ffd3c4;
+  text-align: center;
+  border-style: inset;
+  font-family: cursive;
+  text-shadow: #d3b .4em 0 1em;
 }
 
 #images {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .art {
   padding: 3em;
-  max-width: 20em;
+  max-width: 25em;
   max-height: 25em;
 }

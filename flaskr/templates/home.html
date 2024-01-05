@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}Color Paradise{% endblock %}</h1>
+  <h2>{% block title %}an aesthete's paradise...{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
-<p>Welcome</p> 
 <section id="images">
   <img class="art" src="{{ url_for('static', filename='image0.jpeg') }}" alt="Two cool dudes">
   <img class="art" src="{{ url_for('static', filename='image1.jpeg') }}" alt="Pair of cube paintings">
