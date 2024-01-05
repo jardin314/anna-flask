@@ -5,10 +5,21 @@
 {% endblock %}
 
 {% block content %}
+<table>
+  contacts table
+  <tbody>
   {% for contact in contacts %}
-  <p>contact: {{ contact }}</p>
+    <tr>
+      <td>id: {{ contact['id'] }}</td>
+      <td>name: {{ contact['name'] }}</td>
+      <td>email: {{ contact['email'] }}</td>
+      <td>phone: {{ contact['phone'] }}</td>
+      <td>message: {{ contact['messageBody'] }}</td>
+  </tr>
    {% if not loop.last %}
       <hr>
     {% endif %}
   {% endfor %}
+  </tbody>
+</table>
 {% endblock %}

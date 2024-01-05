@@ -13,9 +13,9 @@ CREATE TABLE post (
 
 CREATE TABLE contactInfo (
   id integer PRIMARY KEY AUTOINCREMENT,
-  name varchar(100) NOT NULL,
-  email varchar(100) NOT NULL,
-  phone varchar(50) NOT NULL,
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  phone TEXT NOT NULL,
   messageBody text NOT NULL,
   created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
